@@ -1,0 +1,11 @@
+#template to be used
+
+{% if list_customers %}
+    <ul>
+    {% for customer in list_customer %}
+        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No customer is present.</p>
+{% endif %}
